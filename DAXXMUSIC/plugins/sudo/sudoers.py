@@ -53,15 +53,15 @@ async def sudoers_list(client, message: Message):
     keyboard = [[InlineKeyboardButton("๏ ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ ๏", callback_data="check_sudo_list")]]
     reply_markups = InlineKeyboardMarkup(keyboard)
   
-    #await message.reply_photo(photo="https://graph.org/file/2528939d35f81c5a71648.mp4", caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ", reply_markup=reply_markups)
-    await message.reply_video(video="https://graph.org/file/2528939d35f81c5a71648.mp4", caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ", reply_markup=reply_markups)
+    #await message.reply_photo(photo="https://graph.org/file/c3d262a40d7a2a5110748.mp4", caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ", reply_markup=reply_markups)
+    await message.reply_video(video="https://graph.org/file/c3d262a40d7a2a5110748.mp4", caption="**» ᴄʜᴇᴄᴋ sᴜᴅᴏ ʟɪsᴛ ʙʏ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ.**\n\n**» ɴᴏᴛᴇ:**  ᴏɴʟʏ sᴜᴅᴏ ᴜsᴇʀs ᴄᴀɴ ᴠɪᴇᴡ. ", reply_markup=reply_markups)
     
 
 @app.on_callback_query(filters.regex("^check_sudo_list$"))
 async def check_sudo_list(client, callback_query: CallbackQuery):
     keyboard = []
     if callback_query.from_user.id not in SUDOERS:
-        return await callback_query.answer("𝗿𝗮𝗻𝗱𝗶 𝗡𝗮𝗿𝘂𝘁𝗼 𝘀𝗮 𝗯𝗼𝗹 𝗿𝗮𝗻𝗱 𝗽𝗮𝗽𝗮🖕😎", show_alert=True)
+        return await callback_query.answer("𝗻𝗶𝗸𝗮𝗹 𝗿𝗮𝗻𝗱𝗶 𝗹𝗲𝗹𝗼𝗰𝗵 𝗽𝗮𝗽𝗮 𝘀𝗮 𝘀𝘂𝗱𝗼 𝗺𝗮𝗮𝗻 𝗯𝗵𝗲𝗸𝗸🖕😎", show_alert=True)
     else:
         user = await app.get_users(OWNER_ID)
 
